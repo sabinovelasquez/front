@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.hero.is-fullheight.landing.is-desktop(v-bind:style="{ backgroundImage: `url('${image}')` }")
+  section.hero.is-fullheight.landing.is-desktop(v-bind:style="{ backgroundImage: `url(${require('../assets/img/bg_top.jpg')})` }")
     .hero-body
       .container.has-text-centered
         .columns.is-desktop.is-centered.is-vcentered
@@ -31,11 +31,6 @@
 
 <script>
 export default {
-  name: 'Landing',
-  data () {
-    return {
-      image: '~img/bg_top.jpg'
-    }
-  }
+  name: 'Landing'
 }
 </script>
