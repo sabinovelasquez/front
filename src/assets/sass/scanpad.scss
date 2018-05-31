@@ -1,0 +1,11 @@
+@import '../assets/sass/functions.scss';
+@import 'bulma-pricingtable/dist/bulma-pricingtable.min.css';
+
+.scanpad{
+  .pricing-plan{
+  }
+  .detail{
+    text-align: center;
+    font-size: 0.8em;
+  }
+}
