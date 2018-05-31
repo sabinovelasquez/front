@@ -1,0 +1,31 @@
+@import '../assets/sass/functions.scss';
+.landing{
+  background-size: cover;
+  background-position: center;
+  h1, h2{
+    font-family: 'Inconsolata', monospace;
+    padding-bottom: 50px;
+    &.title{
+      font-weight: 800;
+      font-size: 1em;
+    }
+    &.subtitle{
+      font-size: 3em;
+    }
+  }
+  .main-logo{
+    max-width: 64px;
+  }
+  .inner{
+    max-width: 80%;
+    margin: auto;
+    .logo{
+      @include transition(filter .3s ease);
+      max-width: 48px;
+      filter: grayscale(1);
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+  }
+}

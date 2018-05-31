@@ -1,0 +1,55 @@
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+//Usage: @include animation('slide-down 5s 3');
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+//Usage:  @include transition(color .3s ease);
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform:rotate(0deg); }
+  100% { transform:rotate(360deg); }
+}
+
+@-webkit-keyframes pulse {
+  0% { -webkit-transform: scale(0.8); }
+  50% { -webkit-transform: scale(1); }
+  100% { -webkit-transform: scale(0.8); }
+}
+@keyframes pulse {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0.8); }
+}
+
+@-webkit-keyframes rainbow {
+  0% { color: rgb(255, 0, 242); }
+  50% { color: rgb(157, 255, 0); }
+  100% { color: rgb(255, 166, 0); }
+}
+@keyframes rainbow {
+  0% { color: rgb(255, 0, 242); }
+  50% { color: rgb(157, 255, 0); }
+  100% { color: rgb(255, 166, 0); }
+}
